@@ -1,1 +1,1 @@
-# skincareQ.github.io
+# skincareq.github.io
