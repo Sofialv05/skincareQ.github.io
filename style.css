@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#description {
+  display: flex;
+  margin: 30px;
+  width: 80%;
+  height: 80vh;
+  background-color: grey;
+  /* padding: 40px; */
+  border-radius: 10px;
+  box-shadow: 20px 20px 40px rgb(206, 203, 203);
+  justify-content: space-between;
+}
+
+/* main img */
+#description .desc-img {
+  width: 28%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* small imgs */
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-group .small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+#description .desc-details {
+  width: 60%;
+  margin: 10px 30px 10px;
+  padding: 20px;
+}
+
+#description .desc-details h2 {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+#description .desc-details h3 {
+  padding: 15px 0 20px 0;
+  font-size: 35px;
+}
+
+#description .desc-details h4 {
+  margin-top: 50px;
+  padding-bottom: 0px;
+}
+
+#description .desc-details input {
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#description .desc-details input:focus {
+  outline: none;
+}
+
+#description .desc-details button {
+  margin-left: 10px;
+  padding: 13px 40px;
+  border-radius: 5px;
+  background-color: #b5c3b8;
+  transition: 0.4s ease;
+  color: white;
+  border: none;
+}
+
+#description .desc-details button:hover {
+  background-color: #c4adc0;
+}
+
+#description .desc-details p {
+  margin-top: 20px;
+  text-align: justify;
+  line-height: 15px;
+  font-size: 14px;
+}
+
+#description #close {
+  font-size: 30px;
+  position: relative;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+/* keranjang belanja */
+
+#keranjang {
+  padding: 40px;
+}
+
+#keranjang table {
+  width: 100%;
+  table-layout: fixed;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+#keranjang table img {
+  width: 70px;
+}
+
+#keranjang table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+
+#keranjang table td:nth-child(2),
+#keranjang table td:nth-child(4),
+#keranjang table td:nth-child(5),
+#keranjang table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+#keranjang table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#keranjang table thead {
+  border: 1px solid silver;
+  border-left: none;
+  border-right: none;
+}
+
+#keranjang table thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 0;
+}
+
+#keranjang table tbody tr td {
+  padding-top: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+.remove:hover {
+  cursor: pointer;
+}
+
+/* total belanja/checkout */
+
+#total-belanja {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 100px 60px;
+}
+
+#total-belanja .total {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#total-belanja .total table {
+  table-layout: fixed;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+#total-belanja .total table tr {
+  font-size: 13px;
+  padding: 30px 0;
+}
+
+#total-belanja .total table tr td {
+  padding: 10px 30px;
+  width: 150px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.total table tr:nth-child(3) {
+  font-weight: 700;
+  border: 2px solid silver;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+#checkout {
+  align-self: flex-end;
+  width: 40%;
+  margin: 40px 10px;
+  padding: 13px 20px;
+  border-radius: 5px;
+  background-color: #b5c3b8;
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+#checkout:hover {
+  background-color: #c4adc0;
+}

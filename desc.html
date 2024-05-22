@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="description">
+      <div class="desc-img">
+        <img
+          id="main-img"
+          src="images/skq1.avif"
+          width="100%"
+          alt="skincareQ"
+        />
+        <div class="small-img-group">
+          <div class="small-img-col">
+            <img
+              class="small-img"
+              src="images/skq1.avif"
+              width="100%"
+              alt="skincareQ"
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              class="small-img"
+              src="images/skq2.avif"
+              width="100%"
+              alt="skincareQ"
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              class="small-img"
+              src="images/skq3.avif"
+              width="100%"
+              alt="skincareQ"
+            />
+          </div>
+          <div class="small-img-col">
+            <img
+              class="small-img"
+              src="images/skq4.avif"
+              width="100%"
+              alt="skincareQ"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="desc-details">
+        <h3 id="product-name">Tea Tree Moisturizer</h3>
+        <h2 id="price">Rp. 150.000,00</h2>
+        <input id="qty" type="number" value="1" min="1" max="5" />
+        <button class="add-to-cart">add to cart</button>
+        <h4>Detail Produk</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia officia
+          quibusdam quisquam non explicabo tenetur, harum odio blanditiis
+          tempore ipsum veritatis doloribus, facere aliquid! Ut nam minus eum
+          cumque hic? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Quaerat nisi aspernatur neque delectus asperiores labore eveniet
+          facilis. Placeat doloribus veritatis dignissimos tempora velit aut
+          reprehenderit, et incidunt, facilis iure maiores?
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia officia
+          quibusdam quisquam non explicabo tenetur, harum odio blanditiis
+          tempore ipsum veritatis doloribus, facere aliquid! Ut nam minus eum
+          cumque hic? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Quaerat nisi aspernatur neque delectus asperiores labore eveniet
+          facilis. Placeat doloribus veritatis dignissimos tempora velit aut
+          reprehenderit, et incidunt, facilis iure maiores?
+        </p>
+      </div>
+      <div id="close"><i class="fa-solid fa-xmark"></i></div>
+    </section>
+
+    <section id="keranjang">
+      <table width="100%">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Gambar Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="table-cart">
+          <!-- <tr class="items">
+            <td class="remove">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </td>
+            <td><img src="images/skq2.avif" alt="skincareQ" /></td>
+            <td>Tea Tree Moisturizer</td>
+            <td>Rp. 150.000,00</td>
+            <td>1</td>
+            <td>Rp. 150.000,00</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="total-belanja">
+      <div class="total">
+        <table>
+          <tr>
+            <td>Total Harga</td>
+            <td class="sum-price">-</td>
+          </tr>
+          <tr>
+            <td>Total Ongkir</td>
+            <td>Gratis</td>
+          </tr>
+          <tr>
+            <td>Total Belanja</td>
+            <td class="sum-checkout">-</td>
+          </tr>
+        </table>
+        <button id="checkout">checkout</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
