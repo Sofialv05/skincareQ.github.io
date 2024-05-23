@@ -54,10 +54,9 @@
 .navbar-logo {
   font-size: 2rem;
   font-weight: 700;
-  width: 100px;
   color: var(--secondary-color);
-  /* cursor: pointer;
-  display: inline-flexbox; */
+  cursor: pointer;
+  margin-right: auto;
 }
 
 #skin {
@@ -67,38 +66,53 @@
   color: var(--secondary-color);
 }
 
+.navbar {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  padding: 1.4rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
 .navbar .navbar-nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.navbar .navbar-nav a {
   color: #e3d3e0;
-  display: inline-block;
   font-size: 1.3rem;
   margin: 0 1rem;
+  text-decoration: none;
+  position: relative;
 }
 
 .navbar .navbar-nav a:hover {
   color: pink;
 }
 
-.navbar.navbar-nav a::after {
+.navbar .navbar-nav a::after {
   content: "";
-  display: block;
+  display: inline-block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary-color) ;
+  ;
+  border-bottom: 0.1rem solid var(--primary-color);
   transform: scaleX(0);
   transition: 0.2s linear;
-  -webkit-transition: 0.2s linear;
-  -moz-transition: 0.2s linear;
-  -ms-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
+  position: absolute; 
+  bottom: -5px;
+  left: 0;
 }
 
-.navbar.navbar-nav a:hover::after {
+.navbar .navbar-nav a:hover::after {
   color: pink;
   transform: scaleX(0.5);
-  -webkit-transform: scaleX(0.5);
-  -moz-transform: scaleX(0.5);
-  -ms-transform: scaleX(0.5);
-  -o-transform: scaleX(0.5);
 }
+
 
 nav button:hover {
   color: white;
