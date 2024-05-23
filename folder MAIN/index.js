@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-let navbarNav = document.querySelector(".nabar-extra");
+let navbarNav = document.querySelector(".nabar-nav");
 document.querySelector("hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
