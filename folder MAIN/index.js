@@ -10,19 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-let navbarNav = document.querySelector(".nabar-nav");
-document.querySelector("hamburger-menu").onclick = () => {
+let navbarNav = document.querySelector(".navbar-nav");
+document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
-
-let productName = document.querySelector("#product-name").innerText;
-let productPrice = parseFloat(document.querySelector("#product-price").innerText);
-let productQuantity = parseInt(document.querySelector("#product-quantity").value);
-let totalPrice = productPrice * productQuantity;
-document.querySelector("#total-price").innerText = totalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-
-
-
 // JS Mba sofia
 
 //deskripsi produk
@@ -136,6 +127,5 @@ addButton.addEventListener("click", () => {
 // removeCart.addEventListener("click", () => {
 //   removeCart.parentNode.remove();
 // });
-
 
 // JS Mba sofia END

@@ -77,9 +77,9 @@
   cursor: pointer;
   margin-right: 0;
 }
-#ul{
- margin-bottom: 0;
- margin-top: 0;
+#ul {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .navbar .navbar-nav a {
   color: red;
@@ -102,7 +102,7 @@
   color: pink;
   transform: scaleX(1);
 }
-.navbar .navbar-extra a{
+.navbar .navbar-extra a {
   color: var(--secondary-color);
   margin: 0 0.5rem;
 }
@@ -112,7 +112,7 @@
 }
 
 #hamburger-menu {
-display: none;
+  display: none;
 }
 /* Media Queries */
 /* Laptop */
@@ -128,17 +128,8 @@ display: none;
     font-size: 62.5%;
   }
 
-  #menu {
+  #hamburger-menu {
     display: inline-block;
-  }
-  
-  .navbar .navbar-extra a {
-    color: var(--primary-color);
-    margin: 0 0.5rem;
-  }
-  
-  .navbar .navbar-extra a:hover {
-    color: var(--primary-color);
   }
   .navbar .navbar-nav {
     position: absolute;
@@ -148,11 +139,20 @@ display: none;
     width: 30rem;
     height: 100vh;
   }
-  
   .navbar .navbar-nav.active {
     right: 0;
   }
 }
+
+  .navbar .navbar-extra {
+    color: var(--primary-color);
+    margin: 0 0.5rem;
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: var(--primary-color);
+  }
+
 
 /* HP */
 @media (max-width: 450px) {
@@ -183,7 +183,7 @@ nav button {
   outline: none;
   background: transparent;
   font-size: 18px;
-  color: var(--secondary-color);
+  color: black;
   cursor: pointer;
 }
 
@@ -217,8 +217,6 @@ header {
   object-fit: cover;
 }
 
-
-
 .card {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -227,7 +225,6 @@ header {
 .tinggi {
   height: 2%;
 }
-
 
 /* CSS Mba SOFIA */
 
