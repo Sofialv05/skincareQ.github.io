@@ -15,19 +15,10 @@ document.querySelector("hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
-
-// Ganti pemilihan kelas untuk membuka menu hamburger
-// let navbarNav = document.querySelector(".navbar-extra");
-
-// Perbaiki pengambilan nilai untuk deskripsi produk
 let productName = document.querySelector("#product-name").innerText;
 let productPrice = parseFloat(document.querySelector("#product-price").innerText);
-
-// Perbaiki pengambilan harga dan penambahan belanjaan
 let productQuantity = parseInt(document.querySelector("#product-quantity").value);
 let totalPrice = productPrice * productQuantity;
-
-// Tampilkan total belanja dengan format yang benar
 document.querySelector("#total-price").innerText = totalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
 
