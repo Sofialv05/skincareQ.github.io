@@ -1,3 +1,40 @@
+function render(array) {
+  let render = document.getElementById("render");
+  // console.log(render)
+  render.innerHTML = "";
+
+  for (let x = 0; x < array.length; x++) {
+      render.innerHTML += `<div class="card">
+          <div class="card h-100">
+              <img 
+              src="${listBelanjaan[x].image}"/>
+              <div class="card-body">
+                  <h5 class="card-title">${listBelanjaan[x].namaProduk}</h5>
+                  <p class="card-text">${listBelanjaan[x].deskripsiProduk}</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 3 mins ago</small>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add To Cart
+        </button>
+          </div>
+      </div>`
+  }
+}
+
+render(listBelanjaan)
+
+
+
+
+
+
+
+
+
+
+
 let themeToggle = document.getElementById("theme-toggle");
 themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");

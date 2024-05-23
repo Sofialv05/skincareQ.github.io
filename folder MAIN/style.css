@@ -442,3 +442,56 @@ nav button {
 }
 
 /* CSS Mba Sofia END */
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.652);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 30%;
+  margin: auto;
+  padding: auto;
+  background-color: rgba(158, 186, 195, 0.7);
+  max-width: 300px;
+}
+
+.col:hover {
+  box-shadow: 0 8px 16px 0 black;
+  transform: scale(1.1);
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.652);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: auto;
+  margin: 1px;
+  padding: 15px;
+  background-color: rgba(229, 243, 192, 0.1);
+  max-width: 300px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 black;
+  transform: scale(1.01);
+}
+
+.modal-content {
+  margin: center;
+  padding: 10px 10px;
+  width: 150%;
+
+
+  background-color: rgba(180, 203, 210, 0.6);
+  border: 3px solid rgb(82, 87, 89);
+  border-radius: 5px;
+
+  overflow-y:scroll;
+  height: 90vh;
+}
