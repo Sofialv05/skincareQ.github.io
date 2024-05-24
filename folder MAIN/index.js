@@ -1,3 +1,31 @@
+//punya mas Gefri
+function render(array) {
+  let render = document.getElementById("render");
+  render.innerHTML = "";
+
+  for (let x = 0; x < array.length; x++) {
+    render.innerHTML += `<div class="card">
+          <div class="card h-100">
+              <img 
+              src="${array[x].image}"/>
+              <div class="card-body">
+                  <h5 class="card-title">${array[x].namaProduk}</h5>
+                  <p class="card-text">${array[x].deskripsiProduk}</p>
+              </div>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 3 mins ago</small>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add To Cart
+        </button>
+          </div>
+      </div>`;
+  }
+}
+
+render(listBelanjaan);
+
+//js mas revi
 let themeToggle = document.getElementById("theme-toggle");
 themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
@@ -14,24 +42,58 @@ let navbarNav = document.querySelector(".navbar-nav");
 document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
-// JS Mba sofia
 
-//deskripsi produk
+// JS Mba sofia
+//click kartu untuk click btn
 const mainImg = document.getElementById("main-img");
 const smallImg = document.getElementsByClassName("small-img");
+const description = document.getElementById("description");
+const cards = document.querySelectorAll(".card");
+const descName = document.getElementById("product-name");
+const descProduct = document.querySelector(".desc-details p");
+const harga = document.querySelector("#price");
 
+// pake forEach
+cards.forEach((card) => {
+  const cardBtn = card.querySelector(".btn");
+  const cardTitle = card.querySelector(".card-title");
+
+  //dom selector untuk btn di dlm class card
+  card.addEventListener("click", () => {
+    cardBtn.click();
+    descName.innerText = cardTitle.innerText;
+    //ganti gambar dan desc sesuai dengan yg di klik
+    for (let i = 0; i < listBelanjaan.length; i++) {
+      let {
+        namaProduk,
+        details,
+        image,
+        image1,
+        image2,
+        image3,
+        image4,
+        hargaProduk,
+      } = listBelanjaan[i];
+      if (namaProduk === cardTitle.innerText) {
+        mainImg.src = image;
+        smallImg[0].src = image1;
+        smallImg[1].src = image2;
+        smallImg[2].src = image3;
+        smallImg[3].src = image4;
+        descProduct.innerText = details;
+        harga.innerText = `Rp. ${hargaProduk}`;
+        break;
+      }
+    }
+  });
+});
+
+//gonta ganti gambar
 for (let i = 0; i < 4; i++) {
   smallImg[i].addEventListener("click", () => {
     mainImg.src = smallImg[i].src;
   });
 }
-
-const closeButton = document.getElementById("close");
-const description = document.getElementById("description");
-
-closeButton.addEventListener("click", () => {
-  description.style = "display: none";
-});
 
 // nambah belanjaan
 const addButton = document.querySelector(".add-to-cart");
@@ -67,14 +129,9 @@ addButton.addEventListener("click", () => {
 
   let numPrice = Number(price);
   const quantity = document.querySelector("#qty").value;
-  let totalPrice = String(numPrice * quantity);
+  let totalPrice = numPrice * quantity;
 
-  let noZeros = "";
-  for (let i = 0; i < totalPrice.length - 3; i++) {
-    noZeros += totalPrice[i];
-  }
-
-  const subTotal = `Rp. ${noZeros}.000,00`;
+  const subTotal = `Rp. ${totalPrice},00`;
   totalBelanja += numPrice * quantity;
 
   let totalCheckOut = `Rp. ${totalBelanja},00`;
@@ -121,11 +178,25 @@ addButton.addEventListener("click", () => {
   }
 });
 
-// remove belanjaan
-// const removeCart = document.querySelector(".remove");
-
-// removeCart.addEventListener("click", () => {
-//   removeCart.parentNode.remove();
-// });
-
 // JS Mba sofia END
+//
+function search() {
+  let buttonSubmit = document.getElementById("searchText").value;
+  console.log(buttonSubmit);
+
+  let newArray = [];
+
+  for (let x = 0; x < listBelanjaan.length; x++) {
+    let name = listBelanjaan[x].namaProduk;
+
+    if (name.toLowerCase().includes(buttonSubmit.toLowerCase())) {
+      newArray.push(listBelanjaan[x]);
+    }
+  }
+
+  render(newArray);
+}
+
+function reset() {
+  render(listBelanjaan);
+}
