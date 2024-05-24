@@ -375,7 +375,9 @@ header {
   flex-direction: column;
   margin: 20px;
   width: 90%;
-  height: 180vh;
+  /*  */
+  height: auto;
+  /*  */
   background-color: rgb(189, 186, 186);
   /*padding: 40px;
   */
@@ -454,7 +456,7 @@ header {
   margin-left: 10px;
   padding: 10px 30px;
   border-radius: 5px;
-  background-color: #b5c3b8;
+  background-color: pink;
   transition: 0.4s ease;
   color: white;
   border: none;
@@ -469,7 +471,7 @@ header {
 }
 
 #description .desc-details button:hover {
-  background-color: #c4adc0;
+  background-color: red;
 }
 
 #description .desc-details p {
@@ -596,7 +598,7 @@ header {
   margin: 40px 10px;
   padding: 13px 20px;
   border-radius: 5px;
-  background-color: #b5c3b8;
+  background-color: pink;
   color: white;
   border: none;
   transition: 0.4s ease;
@@ -604,7 +606,7 @@ header {
 }
 
 #checkout:hover {
-  background-color: #c4adc0;
+  background-color: red;
 }
 
 /* CSS Mba Sofia END */
